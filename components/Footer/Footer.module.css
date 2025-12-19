@@ -1,0 +1,94 @@
+/* Footer styles extracted from original CSS */
+.footer {
+  position: relative;
+  padding-top: 3.125rem;
+  padding-bottom: 5.5rem;
+  background: #000;
+  color: #fff;
+}
+
+.pattern {
+  height: 25.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link::after {
+  transform-origin: bottom center;
+  transition: transform 0.6s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  content: '';
+  position: absolute;
+  height: 1px;
+  background: #fff;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.link:focus-visible::after {
+  transform: scaleY(10) translateZ(0);
+  transition-duration: 0.3s;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin: 4.2rem 0 19.6rem;
+}
+
+.links a {
+  line-height: 1.4;
+}
+
+.subfooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials .item {
+  margin-left: 1.8rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 812px) {
+  .footer {
+    padding-top: 12rem;
+  }
+
+  .pattern {
+    height: 50rem;
+    max-width: calc(100% - 12rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .link {
+    padding-bottom: 4rem;
+  }
+
+  .links {
+    margin-left: 78rem;
+  }
+}
+
+@media (hover: hover) {
+  .link:hover::after {
+    transform: scaleY(10) translateZ(0);
+    transition-duration: 0.3s;
+  }
+}
+
